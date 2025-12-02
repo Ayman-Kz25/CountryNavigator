@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import "theme.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  transition: 0.3s ease;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+}
+
+#root {
+  @apply min-h-[100vh] flex flex-col;
+}
+
+main {
+  @apply mx-auto;
+  flex-grow: 1;
+}
+
+body {
+  @apply bg-[var(--bg)] text-[var(--text)];
+}
+
+/* Header  Component */
+.header-container {
+  @apply sticky top-0 z-50 bg-[var(--primary)] text-[var(--bg)] text-center py-5 px-10 flex justify-between align-middle shadow-[var(--shadow-lg)];
+}
+
+.logo {
+  @apply text-2xl md:text-4xl cursor-pointer select-none hover:text-[var(--accent)];
+}
+
+.title {
+  @apply text-2xl md:text-4xl tracking-wider pointer-events-none;
+}
+
+/* Navbar Component */
+.menu-toggle {
+  @apply text-2xl md:text-4xl text-[var(--bg)] cursor-pointer transition duration-300 hover:text-[var(--accent)];
+}
+
+.navbar {
+  @apply text-white;
+}
+
+.sidebar {
+  @apply fixed top-0 -right-full w-64 min-h-screen bg-[var(--secondary)] p-6 transition-all duration-300 z-50;
+}
+
+.hide-nav {
+  right: -100%;
+}
+
+.show-nav {
+  right: 0;
+}
+
+.nav-list {
+  @apply pt-18;
+}
+
+.close-btn {
+  @apply absolute top-3 right-5 py-6 text-3xl cursor-pointer hover:text-[var(--accent)];
+}
+
+.nav-link {
+  @apply block text-lg md:text-xl text-[var(--bg)] py-4 my-2 rounded-2xl cursor-pointer transition duration-300 hover:text-[var(--primary)] hover:bg-[var(--accent)];
+}
+
+/* Footer */
+.footer {
+  @apply w-full py-6 mt-10 bg-[var(--primary)] text-center shadow-inner;
+}
+
+.footer-text {
+  @apply text-[var(--bg)] text-sm md:text-[1.2rem] tracking-wide;
+}
+
+/* Back to Top */
+.back-to-top {
+  @apply fixed bottom-[42px] right-[28px] w-[48px] h-[48px] rounded-full border-0 outline-0 bg-[var(--accent)] text-[var(--bg)] cursor-pointer text-xl flex items-center justify-center;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  background: var(--accent);
+  transform: translateY(-3px);
+}

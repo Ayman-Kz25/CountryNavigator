@@ -1,0 +1,271 @@
+@import "tailwindcss";
+@import "theme.css";
+
+/*Container*/
+.container-box{
+  @apply flex items-center justify-center gap-60; 
+}
+
+/*Filtered Continents*/
+.continent-dropdown {
+  @apply p-4 px-14 mt-6 rounded-xl border-2 border-gray-400 bg-transparent text-[var(--text)] text-sm md:text-lg cursor-pointer transition-all duration-300 outline-0 shadow shadow-[var(--shadow)] hover:text-[var(--primary)];
+}
+
+.continent-dropdown option {
+  @apply bg-white text-[var(--text)];
+}
+
+/* Search Bar */
+.search-box {
+  @apply flex justify-center py-10 mt-6;
+}
+
+.search-input {
+  @apply border-2 w-[50%] md:w-[300px] text-sm md:text-lg border-gray-400 rounded p-3 text-center focus:border-[var(--accent)];
+}
+
+.search-input input {
+  @apply outline-0 border-0 px-10;
+}
+
+.search-input input::placeholder {
+  @apply text-[var(--text)];
+}
+
+.search-btn {
+  @apply border-0 outline-0 text-2xl text-center items-center text-gray-200 bg-[var(--accent)] rounded-full p-3 ml-4 cursor-pointer transition-transform duration-300;
+}
+
+.search-btn:hover .search-icon {
+  @apply scale-120;
+}
+
+.suggestion-dropdown {
+  @apply absolute top-[200px] left-190 right-0 w-100 bg-[var(--bg)] text-[var(--text)] border-2 border-gray-300 rounded shadow mt-2 z-50 md:max-h-[500px] overflow-y-auto transition duration-300;
+}
+
+.suggestion-list {
+  @apply p-2.5 cursor-pointer text-center hover:bg-[var(--accent)] hover:text-[var(--primary)];
+}
+
+.no-result {
+  @apply absolute left-155 right-0 w-[250px] text-left bg-[var(--bg)] border border-l-5 mt-1 rounded p-3 text-red-600 shadow;
+}
+
+.error {
+  @apply text-2xl text-center text-gray-400 mt-50 p-10;
+}
+
+/* Country Card */
+.card-container {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 p-8;
+  @apply bg-[var(--bg)] text-[var(--text)];
+}
+
+.country-card {
+  @apply rounded-2xl transition-transform duration-300 cursor-pointer overflow-hidden;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(18px) saturate(200%);
+  -webkit-backdrop-filter: blur(18px) saturate(200%);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.22);
+
+  transform: translateY(0);
+}
+
+.country-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+
+.card-grid {
+  @apply flex flex-col;
+}
+
+.card-img {
+  @apply w-full h-40 overflow-hidden relative bg-[var(--secondary)];
+}
+
+.card-img img {
+  @apply w-full h-full object-cover transition-transform duration-300;
+}
+
+.card-img img:hover {
+  @apply scale-110;
+}
+
+.card-img p {
+  @apply absolute bottom-2 left-2 bg-black/40 text-white px-3 py-1 rounded text-sm;
+}
+
+.card-content {
+  @apply p-5 space-y-2;
+}
+
+.card-content .title {
+  @apply text-lg font-bold line-clamp-1 text-[var(--accent)] cursor-pointer;
+}
+
+.card-content p {
+  @apply text-sm text-[var(--text)] leading-relaxed;
+}
+
+.back-to-home {
+  @apply bg-[var(--primary)] text-[var(--bg)] font-bold px-4 py-2 rounded mt-2 ml-10 cursor-pointer hover:bg-[var(--accent)] hover:text-[var(--primary)];
+}
+
+/* Country Detail */
+.country-details-container {
+  @apply py-6 px-2 flex-1 mx-auto;
+}
+
+.back-btn {
+  @apply mb-6 text-[var(--bg)] bg-[var(--secondary)] px-4 py-2 rounded-lg cursor-pointer hover:bg-[var(--accent)] hover:text-[var(--primary)];
+}
+
+.country-main-info {
+  @apply flex flex-col md:flex-row items-start md:items-center gap-[10rem];
+}
+
+.country-flag {
+  @apply w-full md:w-64 rounded shadow-lg;
+}
+
+.country-text h1 {
+  @apply inline-block text-4xl text-[var(--accent)] border-b-2 font-bold mb-6;
+}
+
+.country-text p {
+  @apply mb-2;
+}
+
+.country-text p strong {
+  @apply text-cyan-500;
+}
+
+.neighbors-section {
+  @apply mt-10;
+}
+
+.neighbors-section h2 {
+  @apply text-2xl font-semibold mb-4;
+}
+
+.neighbors-grid {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-5;
+}
+
+.neighbor-card {
+  @apply border rounded py-3 flex flex-col items-center hover:shadow-lg hover:bg-[var(--secondary)] transition;
+}
+
+.neighbor-flag {
+  @apply w-30 h-18 mb-2;
+}
+
+.loading-text {
+  @apply text-center text-xl mt-10;
+}
+
+.error-text {
+  @apply text-center text-red-500 mt-10;
+}
+
+/* Popular Card */
+.popular-page {
+  @apply min-h-screen flex flex-col bg-[var(--bg)] text-[var(--text)];
+}
+
+.popular-content {
+  @apply max-w-6xl mx-auto py-10 flex-1 flex flex-col items-center justify-start;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.popular-title {
+  @apply inline-block text-3xl text-[var(--accent)] font-bold border-b-2 mb-12 text-center md:text-center;
+}
+
+.loading-text {
+  @apply text-center text-xl mt-10;
+}
+
+.popular-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full justify-items-center;
+}
+
+.popular-card {
+  @apply border rounded-lg p-4 flex flex-col items-center justify-center text-center duration-300 transition-transform transform hover:scale-102 shadow-lg shadow-[var(--shadow-lg)] hover:bg-[var(--secondary)] hover:border-none w-full max-w-xs;
+}
+
+.popular-flag {
+  @apply w-60 h-auto mb-2 rounded shadow-sm;
+}
+
+.popular-name {
+  @apply font-bold text-xl mt-2;
+}
+
+.popular-reason {
+  @apply text-sm text-[var(--text)] mt-2;
+}
+
+.popular-card:hover .popular-reason{
+  @apply text-[var(--bg)];
+}
+
+.popular-card:hover .popular-name {
+  @apply text-[var(--accent)]
+}
+
+/* Fun Fact Card */
+.funfact-page {
+  @apply min-h-screen flex flex-col bg-[var(--bg)];
+}
+
+.funfact-content {
+  @apply max-w-6xl mx-auto p-6 flex-1 flex flex-col items-center justify-start;
+}
+
+.funfact-title {
+  @apply inline-block text-3xl text-[var(--accent)] border-b-2 font-bold mb-12 text-center;
+}
+
+.funfact-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full;
+}
+
+.fact-card {
+  @apply bg-[var(--secondary)] text-[var(--text)] text-center rounded-2xl p-6 shadow-lg flex flex-col justify-between transition-transform transform hover:scale-105 hover:shadow-2xl cursor-pointer hover:bg-[var(--primary)] duration-300 overflow-hidden;
+}
+
+.fact-country {
+  @apply font-bold text-[var(--text)] text-2xl mb-3;
+}
+
+.fact-text {
+  @apply text-[1rem] leading-relaxed text-[var(--bg)];
+}
+
+.fact-card:hover .fact-text,
+.fact-card:hover .icon {
+  @apply text-[var(--accent)];
+}
+
+.fact-card:hover .fact-country {
+  @apply text-[var(--bg)];
+}
+
+.fact-card .icon {
+  @apply text-[1rem] mr-2;
+}
+
+.fact-flag {
+  @apply w-[100%] h-[150px] rounded shadow-sm shadow-[var(--shadow)] mb-3;
+}

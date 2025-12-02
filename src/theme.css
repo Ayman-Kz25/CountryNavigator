@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --primary: #1C5D99;      /* soft blue accent */
+  --secondary: #3A6EA5;    /* slightly deeper blue */
+  --accent: #F4A340;       /* warm highlight */
+
+  --bg: #F5F5F5;           /* light gray background */
+  --surface: #FFFFFF;      /* pure white cards */
+  --surface-alt: #E8E8E8;  /* light gray sections */
+
+  --text: #1B1B1B;         /* strong dark text */
+
+  --shadow: rgba(0, 0, 0, 0.15);
+  --shadow-lg: rgba(0, 0, 0, 0.25);
+}
