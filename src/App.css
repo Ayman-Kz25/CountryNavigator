@@ -305,7 +305,7 @@
 }
 
 .country-of-day-card .img {
-  @apply w-40 h-24 object-cover rounded-md mx-auto mb-4 items-center;
+  @apply w-40 h-24 object-cover rounded-md shadow-[var(--shadow-lg)] mx-auto mb-4 items-center;
 }
 
 .country-of-day-card .content {
@@ -345,7 +345,7 @@
 }
 
 .quiz-flag {
-  @apply w-36 h-20 object-cover mx-auto my-4 rounded shadow;
+  @apply w-36 h-20 object-cover mx-auto my-4 rounded shadow-[var(--shadow-lg)];
 }
 
 .quiz-options {
@@ -400,7 +400,7 @@
 }
 
 .guess-flag {
-  @apply w-40 h-24 object-cover mx-auto mb-6 rounded shadow;
+  @apply w-40 h-24 object-cover mx-auto mb-6 rounded shadow-[var(--shadow-lg)];
 }
 
 .guess-options {
