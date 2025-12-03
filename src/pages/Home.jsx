@@ -39,7 +39,7 @@ export default function HomePage() {
     );
   });
 
-  // Determine countries to show
+  // Get countries to show
   const countriesToShow =
     searchCountries.length > 0
       ? searchCountries
@@ -47,7 +47,7 @@ export default function HomePage() {
       ? filteredByContinent
       : [...allCountries].slice(0, 20);
 
-  // Sorting function
+  // Sorting functionality
   const sortCountries = (countriesList) => {
     const sorted = [...countriesList];
     switch (sortType) {
@@ -117,7 +117,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Back button for search */}
         {searchCountries.length > 0 && (
           <button onClick={resetSearch} className="back-to-home">
             <FontAwesomeIcon icon="fas fa-chevron-left" />
@@ -125,7 +124,6 @@ export default function HomePage() {
           </button>
         )}
 
-        {/* Loading / Country Cards */}
         {loading ? (
           <p className="text-center text-3xl mt-4">Loading...</p>
         ) : (
