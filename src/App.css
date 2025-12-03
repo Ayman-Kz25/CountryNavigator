@@ -290,7 +290,7 @@
   @apply relative max-w-[600px] w-[90%] mx-auto my-[8%] bg-[var(--surface)] p-5 rounded-xl shadow-[var(--shadow-lg)] z-[1001];
 }
 
-.close-btn {
+.modal .close-btn {
   @apply absolute top-2.5 right-3.5 text-3xl bg-none border-0 cursor-pointer text-[var(--primary)] z-10;
 }
 
