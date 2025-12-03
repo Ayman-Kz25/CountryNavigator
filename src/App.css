@@ -291,7 +291,7 @@
 }
 
 .close-btn {
-  @apply absolute top-2.5 right-3.5 text-3xl bg-none border-0 cursor-pointer text-[var(--surface)] z-10;
+  @apply absolute top-2.5 right-3.5 text-3xl bg-none border-0 cursor-pointer text-[var(--primary)] z-10;
 }
 
 /* Country of the day Card */
