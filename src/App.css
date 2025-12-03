@@ -9,7 +9,7 @@
 /*Filtered Continents*/
 
 .continent-dropdown {
-  @apply p-4 px-14 mt-6 rounded-xl border-2 border-gray-400 bg-transparent text-[var(--text)] text-sm md:text-lg cursor-pointer transition-all duration-300 outline-0 shadow shadow-[var(--shadow)] hover:text-[var(--primary)];
+  @apply p-4 px-14 mt-6 rounded-xl border-2 border-gray-400 bg-transparent text-[var(--text)] text-sm md:text-lg cursor-pointer transition-all duration-300 outline-0 shadow-[var(--shadow)] hover:text-[var(--primary)];
 }
 
 .continent-dropdown option {
@@ -229,7 +229,7 @@
 }
 
 .fact-flag {
-  @apply w-[100%] h-[150px] rounded shadow-sm shadow-[var(--shadow)] mb-3;
+  @apply w-[100%] h-[150px] rounded shadow-[var(--shadow)] mb-3;
 }
 
 /* Explore & Compare Page */
@@ -409,7 +409,7 @@
 
 .guess-btn {
   @apply px-4 py-3 text-gray-800 outline-none
-         rounded-xl shadow-sm border-2 border-[var(--secondary)] transition-all text-left hover:bg-[var(--accent)] hover:border-transparent hover:text-white transition duration-300;
+         rounded-xl shadow-sm border-2 border-[var(--secondary)] text-left hover:bg-[var(--accent)] hover:border-transparent hover:text-white transition duration-300;
 }
 
 .correct {

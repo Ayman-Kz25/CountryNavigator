@@ -115,7 +115,7 @@ export default function GuessCountryCard({ allCountries, closeModal }) {
 
       {/* Show final score only on last question before closing */}
       {selected && questionIndex + 1 === TOTAL_QUESTIONS && (
-        <p className="mt-4 text-[var(--primary)] dark:text-blue-400 font-semibold text-center">
+        <p className="mt-4 text-[var(--primary)] font-semibold text-center">
           Final Score: {score + (correct ? 1 : 0)} / {TOTAL_QUESTIONS}
           <br />
           Closing...
