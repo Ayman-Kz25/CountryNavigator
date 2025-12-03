@@ -1,16 +1,63 @@
-# React + Vite
+# Country Navigator 🌍
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Country Navigator is an interactive and educational web application that allows users to explore detailed information about countries around the world. The website provides essential data such as population, capital, currencies, borders, flags, and also showcases fun facts about countries. It’s designed to offer a clean, intuitive, and engaging experience for users.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse countries with a **search bar** or by **continent filter**.
+- View detailed country information including:
+  - Flag
+  - Capital
+  - Population
+  - Area
+  - Region
+  - Currencies
+  - Languages
+  - Neighboring countries
+- Fun Facts page highlighting interesting trivia about different countries.
+- **Responsive design** suitable for mobile and desktop devices.
+- Smooth UI interactions with Tailwind CSS styling.
 
-## React Compiler
+## 🛠️ Built With
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React](https://reactjs.org/) – Frontend library
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework
+- [REST Countries API](https://restcountries.com/) – Country data
+- [FontAwesome](https://fontawesome.com/) – Icons
+- [Vite](https://vitejs.dev/) – Development environment and bundler
 
-## Expanding the ESLint configuration
+## 🌈 UI / UX Design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Light, professional theme focusing on readability and clarity.
+- Clean, card-based layout for country information.
+- Fun Facts section with engaging trivia.
+- Smooth transitions and responsive layout.
+
+## ⚡ Getting Started
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/yourusername/country-navigator.git
+cd country-navigator
+Install dependencies
+
+bash
+Copy code
+npm install
+Start development server
+
+bash
+Copy code
+npm run dev
+Open http://localhost:5173 in your browser.
+
+🔗 API Reference
+REST Countries API
+
+Fetch country details: https://restcountries.com/v3.1/all
+
+Fetch country by name: https://restcountries.com/v3.1/name/{countryName}
+
+📄 License
+This project is licensed under the MIT License.
