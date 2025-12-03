@@ -2,11 +2,12 @@
 @import "theme.css";
 
 /*Container*/
-.container-box{
-  @apply flex items-center justify-center gap-60; 
+.container-box {
+  @apply flex justify-center items-center gap-30;
 }
 
 /*Filtered Continents*/
+
 .continent-dropdown {
   @apply p-4 px-14 mt-6 rounded-xl border-2 border-gray-400 bg-transparent text-[var(--text)] text-sm md:text-lg cursor-pointer transition-all duration-300 outline-0 shadow shadow-[var(--shadow)] hover:text-[var(--primary)];
 }
@@ -41,7 +42,7 @@
 }
 
 .suggestion-dropdown {
-  @apply absolute top-[200px] left-190 right-0 w-100 bg-[var(--bg)] text-[var(--text)] border-2 border-gray-300 rounded shadow mt-2 z-50 md:max-h-[500px] overflow-y-auto transition duration-300;
+  @apply absolute top-[200px] left-120 right-0 w-100 bg-[var(--bg)] text-[var(--text)] border-2 border-gray-300 rounded shadow mt-2 z-50 md:max-h-[500px] overflow-y-auto transition duration-300;
 }
 
 .suggestion-list {
@@ -54,6 +55,15 @@
 
 .error {
   @apply text-2xl text-center text-gray-400 mt-50 p-10;
+}
+
+/* sort Card */
+.sort-box {
+  @apply mt-6;
+}
+
+.sort-dropdown {
+  @apply p-4 text-lg rounded-xl border-2 border-gray-400 outline-0 cursor-pointer;
 }
 
 /* Country Card */
@@ -82,7 +92,6 @@
 .country-card:hover {
   transform: translateY(-6px) scale(1.02);
 }
-
 
 .card-grid {
   @apply flex flex-col;
@@ -117,7 +126,7 @@
 }
 
 .back-to-home {
-  @apply bg-[var(--primary)] text-[var(--bg)] font-bold px-4 py-2 rounded mt-2 ml-10 cursor-pointer hover:bg-[var(--accent)] hover:text-[var(--primary)];
+  @apply bg-[var(--primary)] text-[var(--bg)] font-bold px-4 py-2 rounded mt-2 ml-10 cursor-pointer hover:bg-[var(--accent)] hover:text-[var(--primary)] transition duration-300;
 }
 
 /* Country Detail */
@@ -177,53 +186,6 @@
   @apply text-center text-red-500 mt-10;
 }
 
-/* Popular Card */
-.popular-page {
-  @apply min-h-screen flex flex-col bg-[var(--bg)] text-[var(--text)];
-}
-
-.popular-content {
-  @apply max-w-6xl mx-auto py-10 flex-1 flex flex-col items-center justify-start;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.popular-title {
-  @apply inline-block text-3xl text-[var(--accent)] font-bold border-b-2 mb-12 text-center md:text-center;
-}
-
-.loading-text {
-  @apply text-center text-xl mt-10;
-}
-
-.popular-grid {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full justify-items-center;
-}
-
-.popular-card {
-  @apply border rounded-lg p-4 flex flex-col items-center justify-center text-center duration-300 transition-transform transform hover:scale-102 shadow-lg shadow-[var(--shadow-lg)] hover:bg-[var(--secondary)] hover:border-none w-full max-w-xs;
-}
-
-.popular-flag {
-  @apply w-60 h-auto mb-2 rounded shadow-sm;
-}
-
-.popular-name {
-  @apply font-bold text-xl mt-2;
-}
-
-.popular-reason {
-  @apply text-sm text-[var(--text)] mt-2;
-}
-
-.popular-card:hover .popular-reason{
-  @apply text-[var(--bg)];
-}
-
-.popular-card:hover .popular-name {
-  @apply text-[var(--accent)]
-}
-
 /* Fun Fact Card */
 .funfact-page {
   @apply min-h-screen flex flex-col bg-[var(--bg)];
@@ -268,4 +230,267 @@
 
 .fact-flag {
   @apply w-[100%] h-[150px] rounded shadow-sm shadow-[var(--shadow)] mb-3;
+}
+
+/* Explore & Compare Page */
+.explore-page {
+  @apply min-h-screen flex flex-col items-center bg-[var(--bg)];
+}
+
+.explore-title {
+  @apply inline-block text-3xl text-[var(--accent)] border-b-2 font-bold my-12 text-center;
+}
+
+.main-card {
+  @apply bg-[var(--surface)] p-6 mb-3 rounded-2xl text-center w-[700px];
+}
+
+.main-card h3 {
+  @apply text-2xl text-[var(--primary)] font-bold mb-2;
+}
+
+.main-card p {
+  @apply text-gray-500 my-4;
+}
+
+.btn-main {
+  @apply border-2 border-[var(--accent)] text-[var(--accent)] bg-transparent transition duration-300 cursor-pointer p-3 rounded-xl my-4 hover:bg-[var(--accent)] hover:border-transparent hover:text-white;
+}
+
+.explore-section {
+  @apply flex flex-wrap gap-6 justify-center mt-8;
+}
+
+.card {
+  @apply bg-[var(--surface)] rounded-[20px] p-[1.5rem] w-[350px] text-center shadow-[var(--shadow-lg)] cursor-pointer transition duration-300 hover:shadow-lg hover:transform hover:-translate-y-1.5;
+}
+
+.card h3 {
+  @apply text-2xl font-bold text-[var(--primary)] mb-2;
+}
+
+.card p {
+  @apply text-gray-500 text-[0.95rem] my-4;
+}
+
+.btn {
+  @apply border-2 border-[var(--accent)] text-[var(--accent)] bg-transparent transition duration-300 cursor-pointer p-3 rounded-xl my-4 hover:bg-[var(--accent)] hover:border-transparent hover:text-white;
+}
+
+.modal {
+  @apply fixed top-0 left-0 w-full h-full z-100;
+}
+
+.modal-overlay {
+  @apply absolute w-full h-full bg-[rgba(0,0,0,0.6)];
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  @apply relative max-w-[600px] w-[90%] mx-auto my-[8%] bg-[var(--surface)] p-5 rounded-xl shadow-[var(--shadow-lg)] z-[1001];
+}
+
+.close-btn {
+  @apply absolute top-2.5 right-3.5 text-3xl bg-none border-0 cursor-pointer text-[var(--primary)] z-10;
+}
+
+/* Country of the day Card */
+.country-of-day-card {
+  @apply w-full max-w-md mx-auto shadow-lg bg-[var(--primary)] rounded-2xl p-6 text-center;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.country-of-day-card .title {
+  @apply text-3xl font-semibold mb-4 text-white;
+}
+
+.country-of-day-card .img {
+  @apply w-40 h-24 object-cover rounded-md mx-auto mb-4 items-center;
+}
+
+.country-of-day-card .content {
+  @apply space-y-2 text-gray-200 text-xl;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Quiz/Trivia Card */
+.quiz-card {
+  @apply max-w-xl mx-auto bg-white p-10 rounded-2xl shadow-lg relative;
+}
+
+.quiz-title {
+  @apply text-2xl font-bold text-center my-4;
+}
+
+.quiz-result-text {
+  @apply text-lg text-center mb-6 text-gray-700;
+}
+
+.quiz-score {
+  @apply absolute top-3 left-4 bg-[var(--accent)] text-white px-3 py-1 rounded-lg text-sm shadow-md;
+}
+
+.quiz-question {
+  @apply text-xl font-semibold mt-6 text-gray-900;
+}
+
+.quiz-flag {
+  @apply w-36 h-20 object-cover mx-auto my-4 rounded shadow;
+}
+
+.quiz-options {
+  @apply flex flex-col gap-3 mt-6;
+}
+
+.quiz-btn {
+  @apply px-4 py-3 bg-[var(--primary)] text-[var(--surface)] 
+         rounded-xl shadow-sm transition-all border text-center cursor-pointer hover:bg-[var(--accent)] hover:text-white;
+}
+
+.correct {
+  @apply bg-green-500 text-white border-green-600;
+}
+
+.wrong {
+  @apply bg-red-500 text-white border-red-600;
+}
+
+/* Progress bar */
+.quiz-progress-wrapper {
+  @apply w-full rounded-full h-5 overflow-hidden;
+}
+
+.quiz-progress-bar {
+  @apply bg-[var(--accent)] h-full transition-all duration-700;
+}
+
+/* Guess the Country Card */
+/* Animation */
+@keyframes guessFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-guess {
+  animation: guessFade 0.35s ease-out;
+}
+
+.guess-card {
+  @apply max-w-md mx-auto bg-white p-6 rounded-2xl shadow-lg text-center;
+}
+
+.guess-title {
+  @apply text-2xl font-bold mb-4 text-gray-900;
+}
+
+.guess-flag {
+  @apply w-40 h-24 object-cover mx-auto mb-6 rounded shadow;
+}
+
+.guess-options {
+  @apply flex flex-col gap-3;
+}
+
+.guess-btn {
+  @apply px-4 py-3 text-gray-800 outline-none
+         rounded-xl shadow-sm border-2 border-[var(--secondary)] transition-all text-left hover:bg-[var(--accent)] hover:border-transparent hover:text-white transition duration-300;
+}
+
+.correct {
+  @apply bg-green-500 text-white border-green-600;
+}
+
+.wrong {
+  @apply bg-red-500 text-white border-red-600;
+}
+
+.guess-feedback {
+  @apply mt-4 text-lg font-medium text-gray-900;
+}
+
+/* Rank Compare Card */
+.rank-card {
+  @apply w-full bg-white p-5 rounded-2xl;
+}
+
+.rank-title {
+  @apply text-2xl font-semibold mb-4 text-[var(--primary)]  text-center;
+}
+
+.rank-sort {
+  @apply flex justify-center gap-3 mb-5;
+}
+
+.rank-btn {
+  @apply px-4 py-2 rounded-xl text-sm font-medium border border-neutral-300 bg-neutral-100
+    hover:bg-neutral-200 transition duration-300;
+}
+
+.rank-btn.active {
+  @apply bg-[var(--accent)] text-white border-2 border-transparent hover:bg-transparent hover:border-[var(--accent)] hover:text-[var(--accent)] transition duration-300;
+}
+
+.rank-list {
+  @apply flex flex-col gap-4;
+}
+
+.rank-item {
+  @apply flex items-center gap-4;
+}
+
+.rank-label {
+  @apply flex items-center gap-2 w-40 text-neutral-800;
+}
+
+.rank-flag {
+  @apply w-8 h-6 object-cover rounded-sm border border-neutral-300;
+}
+
+.rank-bar-wrap {
+  @apply flex-1 h-3 bg-neutral-200 rounded-full overflow-hidden;
+}
+
+.rank-bar-fill {
+  @apply h-full bg-[var(--secondary)] rounded-full transition-all duration-300;
+}
+
+.rank-value {
+  @apply w-24 text-right text-neutral-700 font-medium;
+}
+
+/* Insights Panel */
+.insight-panel {
+  @apply min-h-screen flex flex-col items-center bg-[var(--bg)];
+}
+
+.insight-panel .title {
+  @apply inline-block text-3xl text-[var(--accent)] border-b-2 font-bold my-12 text-center;
+}
+
+.charts-container {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8 mt-6;
+}
+
+.chart {
+  @apply bg-white w-[600px] shadow-lg rounded-lg p-6 flex flex-col items-center;
+}
+
+.chart h2 {
+  @apply text-lg font-semibold mb-4;
 }

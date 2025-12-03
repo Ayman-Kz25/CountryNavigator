@@ -24,8 +24,11 @@ function Navbar() {
           <Link className="nav-link" to="/" onClick={()=>setOpen(false)}>
             Home
           </Link>
-          <Link className="nav-link" to="/popular" onClick={()=>setOpen(false)}>
-            Popular
+          <Link className="nav-link" to="/insight" onClick={()=>setOpen(false)}>
+            Insights Panel
+          </Link>       
+          <Link className="nav-link" to="/explore" onClick={()=>setOpen(false)}>
+            Explore Countries
           </Link>
           <Link className="nav-link" to="/facts" onClick={()=>setOpen(false)}>
             Fun Facts
